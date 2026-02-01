@@ -61,36 +61,65 @@
       <!-- Page label -->
       <h1 class="h4 text-muted mb-4">Contact Us</h1>
 
-      <!-- Top text lines (mockup shows 2 lines) -->
+      <!-- Two header lines (mockup style) -->
       <div class="mb-4">
         <div class="bg-secondary-subtle rounded" style="height: 6px; max-width: 55%;"></div>
         <div class="bg-secondary-subtle rounded mt-2" style="height: 6px; max-width: 45%;"></div>
       </div>
 
-      <!-- Form + button layout -->
+      <!-- Form layout -->
       <div class="row g-4 align-items-start">
-
-        <!-- Left: form fields (stacked) -->
+        <!-- Left: form fields -->
         <div class="col-12 col-lg-7">
-          <form aria-label="Contact form" class="d-grid gap-4">
+          <form class="d-grid gap-4" aria-label="Contact form">
 
-            <!-- Name -->
-            <div class="border rounded-3 bg-white" style="height: 70px;"></div>
+            <div>
+              <label for="name" class="form-label visually-hidden">Name</label>
+              <input
+                id="name"
+                type="text"
+                class="form-control form-control-lg"
+                placeholder="Name"
+                aria-label="Name"
+              >
+            </div>
 
-            <!-- Email -->
-            <div class="border rounded-3 bg-white" style="height: 70px;"></div>
+            <div>
+              <label for="email" class="form-label visually-hidden">Email</label>
+              <input
+                id="email"
+                type="email"
+                class="form-control form-control-lg"
+                placeholder="Email"
+                aria-label="Email"
+              >
+            </div>
 
-            <!-- Message (taller box) -->
-            <div class="border rounded-3 bg-white" style="height: 220px;"></div>
+            <div>
+              <label for="message" class="form-label visually-hidden">Message</label>
+              <textarea
+                id="message"
+                class="form-control form-control-lg"
+                rows="6"
+                placeholder="Message"
+                aria-label="Message"
+                style="min-height: 220px;"
+              ></textarea>
+            </div>
 
           </form>
         </div>
 
-        <!-- Right: Send button block (rounded rectangle like mockup) -->
+        <!-- Right: Send pill button (matches mockup position) -->
         <div class="col-12 col-lg-5 d-flex justify-content-lg-end">
-          <div class="bg-secondary-subtle rounded-pill" style="height: 64px; width: 320px;"></div>
+          <button
+            type="button"
+            class="btn btn-secondary btn-lg rounded-pill px-5"
+            style="height: 64px; width: 320px;"
+          >
+            Send
+          </button>
         </div>
-
       </div>
 
       <!-- Bottom dots -->
