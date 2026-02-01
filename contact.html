@@ -1,76 +1,120 @@
-<header>
-  <div class="navbar">
-    <a class="brand" href="index.html" aria-label="JavaBeen Mockup Home">
-      <div class="brand-badge" aria-hidden="true"></div>
-      <span>JavaBeen Mockup</span>
-    </a>
-
-    <div class="nav-actions">
-      <div class="search" role="search" aria-label="Site search">
-        <span aria-hidden="true">⌕</span>
-        <input type="search" placeholder="Search…" />
-      </div>
-
-      <button class="hamburger" type="button" data-hamburger aria-expanded="false" aria-controls="mobileMenu">
-        ☰
-      </button>
-    </div>
-  </div>
-
-  <div id="mobileMenu" class="mobile-menu" data-mobile-menu>
-    <div class="container">
-      <div class="menu-list" aria-label="Site navigation">
-        <a class="menu-item" href="vision-about.html">Vision &amp; About Us</a>
-        <a class="menu-item" href="products.html">Products Menu</a>
-        <a class="menu-item" href="shop.html">Shop</a>
-        <a class="menu-item" href="locations.html">Locations</a>
-        <a class="menu-item" href="contact.html">Contact Us</a>
-      </div>
-    </div>
-  </div>
-</header>
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>JavaBeen Mockup | Contact</title>
-  <link rel="stylesheet" href="assets/css/styles.css" />
-</head>
-<body>
-  <header> ... (same shared header) ... </header>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JavaBeen Mockup | Contact</title>
 
-  <main class="container">
-    <h1 class="section-title">Contact Us</h1>
+    <!-- Bootstrap CSS (CDN) -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    >
+  </head>
 
-    <div class="two-col">
-      <div class="block">
-        Short intro / instructions placeholder.
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">JavaBeen Mockup</a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNav"
+          aria-controls="mainNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="vision-about.html">Vision & About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="products.html">Products</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="shop.html">Shop</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="locations.html">Locations</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main -->
+    <main class="container my-5">
+
+      <!-- Page label -->
+      <h1 class="h4 text-muted mb-4">Contact Us</h1>
+
+      <!-- Top text lines (mockup shows 2 lines) -->
+      <div class="mb-4">
+        <div class="bg-secondary-subtle rounded" style="height: 6px; max-width: 55%;"></div>
+        <div class="bg-secondary-subtle rounded mt-2" style="height: 6px; max-width: 45%;"></div>
       </div>
 
-      <form class="stack" aria-label="Contact form">
-        <label class="block">
-          Name<br />
-          <input style="width:100%; padding:10px; margin-top:6px; border:1px solid var(--border); border-radius:10px;" />
-        </label>
+      <!-- Form + button layout -->
+      <div class="row g-4 align-items-start">
 
-        <label class="block">
-          Email<br />
-          <input style="width:100%; padding:10px; margin-top:6px; border:1px solid var(--border); border-radius:10px;" />
-        </label>
+        <!-- Left: form fields (stacked) -->
+        <div class="col-12 col-lg-7">
+          <form aria-label="Contact form" class="d-grid gap-4">
 
-        <label class="block">
-          Message<br />
-          <textarea rows="5" style="width:100%; padding:10px; margin-top:6px; border:1px solid var(--border); border-radius:10px;"></textarea>
-        </label>
+            <!-- Name -->
+            <div class="border rounded-3 bg-white" style="height: 70px;"></div>
 
-        <button class="button" type="submit" style="border:none; cursor:pointer;">Send</button>
-      </form>
-    </div>
+            <!-- Email -->
+            <div class="border rounded-3 bg-white" style="height: 70px;"></div>
 
-    <div class="footer">© JavaBeen Mockup</div>
-  </main>
+            <!-- Message (taller box) -->
+            <div class="border rounded-3 bg-white" style="height: 220px;"></div>
 
-  <script src="assets/js/nav.js"></script>
-</body>
+          </form>
+        </div>
+
+        <!-- Right: Send button block (rounded rectangle like mockup) -->
+        <div class="col-12 col-lg-5 d-flex justify-content-lg-end">
+          <div class="bg-secondary-subtle rounded-pill" style="height: 64px; width: 320px;"></div>
+        </div>
+
+      </div>
+
+      <!-- Bottom dots -->
+      <div class="d-flex justify-content-center gap-4 mt-5">
+        <span class="rounded-circle bg-secondary-subtle d-inline-block" style="width: 14px; height: 14px;"></span>
+        <span class="rounded-circle bg-secondary-subtle d-inline-block" style="width: 14px; height: 14px;"></span>
+        <span class="rounded-circle bg-secondary-subtle d-inline-block" style="width: 14px; height: 14px;"></span>
+      </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-top mt-5 py-3">
+      <div class="container text-center text-muted">
+        © JavaBeen Mockup — www.javabeenmockup.com
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+
+  </body>
 </html>
