@@ -1,71 +1,126 @@
-<header>
-  <div class="navbar">
-    <a class="brand" href="index.html" aria-label="JavaBeen Mockup Home">
-      <div class="brand-badge" aria-hidden="true"></div>
-      <span>JavaBeen Mockup</span>
-    </a>
-
-    <div class="nav-actions">
-      <div class="search" role="search" aria-label="Site search">
-        <span aria-hidden="true">⌕</span>
-        <input type="search" placeholder="Search…" />
-      </div>
-
-      <button class="hamburger" type="button" data-hamburger aria-expanded="false" aria-controls="mobileMenu">
-        ☰
-      </button>
-    </div>
-  </div>
-
-  <div id="mobileMenu" class="mobile-menu" data-mobile-menu>
-    <div class="container">
-      <div class="menu-list" aria-label="Site navigation">
-        <a class="menu-item" href="vision-about.html">Vision &amp; About Us</a>
-        <a class="menu-item" href="products.html">Products Menu</a>
-        <a class="menu-item" href="shop.html">Shop</a>
-        <a class="menu-item" href="locations.html">Locations</a>
-        <a class="menu-item" href="contact.html">Contact Us</a>
-      </div>
-    </div>
-  </div>
-</header>
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>JavaBeen Mockup | Vision & About</title>
-  <link rel="stylesheet" href="assets/css/styles.css" />
-</head>
-<body>
-  <!-- paste the shared header here -->
-  <header> ... (same as index header) ... </header>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JavaBeen Mockup | Vision & About</title>
 
-  <main class="container">
-    <h1 class="section-title">Vision &amp; About Us</h1>
+    <!-- Bootstrap CSS (CDN) -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    >
+  </head>
 
-    <div class="two-col">
-      <div class="stack">
-        <div class="block">Intro text block</div>
-        <div class="block">Mission / values block</div>
+  <body>
+
+    <!-- Navigation (matches your Home page approach) -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">
+          JavaBeen Mockup
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNav"
+          aria-controls="mainNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" href="vision-about.html">Vision & About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="products.html">Products</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="shop.html">Shop</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="locations.html">Locations</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container my-5">
+
+      <!-- Page Title (light like the mockup label) -->
+      <h1 class="h4 text-muted mb-4">Vision & About</h1>
+
+      <!-- Intro text lines (mockup shows 2–3 lines) -->
+      <div class="mb-5">
+        <div class="bg-secondary-subtle rounded" style="height: 6px; width: 70%;"></div>
+        <div class="bg-secondary-subtle rounded mt-2" style="height: 6px; width: 55%;"></div>
+        <div class="bg-secondary-subtle rounded mt-2" style="height: 6px; width: 35%;"></div>
       </div>
 
-      <div class="stack">
-        <div class="thumb"></div>
-        <div class="block">Supporting details</div>
+      <!-- 3 cards in a row (key part of your mockup) -->
+      <div class="row g-5 justify-content-center">
+
+        <div class="col-12 col-md-4">
+          <div class="text-center">
+            <div class="bg-secondary-subtle rounded-3 mx-auto" style="height: 220px; width: 90%;"></div>
+            <div class="bg-secondary-subtle rounded mt-4 mx-auto" style="height: 6px; width: 60%;"></div>
+            <div class="bg-secondary-subtle rounded mt-2 mx-auto" style="height: 6px; width: 45%;"></div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-4">
+          <div class="text-center">
+            <div class="bg-secondary-subtle rounded-3 mx-auto border border-primary border-3" style="height: 220px; width: 90%;"></div>
+            <div class="bg-secondary-subtle rounded mt-4 mx-auto" style="height: 6px; width: 60%;"></div>
+            <div class="bg-secondary-subtle rounded mt-2 mx-auto" style="height: 6px; width: 45%;"></div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-4">
+          <div class="text-center">
+            <div class="bg-secondary-subtle rounded-3 mx-auto" style="height: 220px; width: 90%;"></div>
+            <div class="bg-secondary-subtle rounded mt-4 mx-auto" style="height: 6px; width: 60%;"></div>
+            <div class="bg-secondary-subtle rounded mt-2 mx-auto" style="height: 6px; width: 45%;"></div>
+          </div>
+        </div>
+
       </div>
-    </div>
 
-    <h2 class="section-title">Highlights</h2>
-    <div class="cards">
-      <div class="card"><div class="thumb"></div><div class="block">Highlight 1</div></div>
-      <div class="card"><div class="thumb"></div><div class="block">Highlight 2</div></div>
-      <div class="card"><div class="thumb"></div><div class="block">Highlight 3</div></div>
-    </div>
+      <!-- Bottom dots (like your mockup) -->
+      <div class="d-flex justify-content-center gap-4 mt-5">
+        <span class="rounded-circle bg-secondary-subtle d-inline-block" style="width: 14px; height: 14px;"></span>
+        <span class="rounded-circle bg-secondary-subtle d-inline-block" style="width: 14px; height: 14px;"></span>
+        <span class="rounded-circle bg-secondary-subtle d-inline-block" style="width: 14px; height: 14px;"></span>
+      </div>
 
-    <div class="footer">© JavaBeen Mockup</div>
-  </main>
+    </main>
 
-  <script src="assets/js/nav.js"></script>
-</body>
+    <!-- Footer -->
+    <footer class="border-top mt-5 py-3">
+      <div class="container text-center text-muted">
+        © JavaBeen Mockup — www.javabeenmockup.com
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+
+  </body>
 </html>
