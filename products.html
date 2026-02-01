@@ -1,70 +1,177 @@
-<header>
-  <div class="navbar">
-    <a class="brand" href="index.html" aria-label="JavaBeen Mockup Home">
-      <div class="brand-badge" aria-hidden="true"></div>
-      <span>JavaBeen Mockup</span>
-    </a>
-
-    <div class="nav-actions">
-      <div class="search" role="search" aria-label="Site search">
-        <span aria-hidden="true">⌕</span>
-        <input type="search" placeholder="Search…" />
-      </div>
-
-      <button class="hamburger" type="button" data-hamburger aria-expanded="false" aria-controls="mobileMenu">
-        ☰
-      </button>
-    </div>
-  </div>
-
-  <div id="mobileMenu" class="mobile-menu" data-mobile-menu>
-    <div class="container">
-      <div class="menu-list" aria-label="Site navigation">
-        <a class="menu-item" href="vision-about.html">Vision &amp; About Us</a>
-        <a class="menu-item" href="products.html">Products Menu</a>
-        <a class="menu-item" href="shop.html">Shop</a>
-        <a class="menu-item" href="locations.html">Locations</a>
-        <a class="menu-item" href="contact.html">Contact Us</a>
-      </div>
-    </div>
-  </div>
-</header>
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>JavaBeen Mockup | Products</title>
-  <link rel="stylesheet" href="assets/css/styles.css" />
-</head>
-<body>
-  <header> ... (same shared header) ... </header>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JavaBeen Mockup | Products</title>
 
-  <main class="container">
-    <h1 class="section-title">Products Menu</h1>
+    <!-- Bootstrap CSS (CDN) -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    >
+  </head>
 
-    <div class="stack">
-      <div class="card">
-        <div class="thumb"></div>
-        <div class="block">Product item 1</div>
-      </div>
-      <div class="card">
-        <div class="thumb"></div>
-        <div class="block">Product item 2</div>
-      </div>
-      <div class="card">
-        <div class="thumb"></div>
-        <div class="block">Product item 3</div>
-      </div>
-      <div class="card">
-        <div class="thumb"></div>
-        <div class="block">Product item 4</div>
-      </div>
-    </div>
+  <body>
 
-    <div class="footer">© JavaBeen Mockup</div>
-  </main>
+    <!-- Navigation (same pattern as Home + Vision) -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">JavaBeen Mockup</a>
 
-  <script src="assets/js/nav.js"></script>
-</body>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNav"
+          aria-controls="mainNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="vision-about.html">Vision & About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="products.html">Products</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="shop.html">Shop</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="locations.html">Locations</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main -->
+    <main class="container my-5">
+
+      <!-- Page label like the mockup -->
+      <h1 class="h4 text-muted mb-4">Products Menu</h1>
+
+      <!-- Top text lines (mockup has 2 lines) -->
+      <div class="mb-4">
+        <div class="bg-secondary-subtle rounded" style="height: 6px; max-width: 55%;"></div>
+        <div class="bg-secondary-subtle rounded mt-2" style="height: 6px; max-width: 45%;"></div>
+      </div>
+
+      <!-- Product grid: 2 columns on desktop, 1 column on mobile -->
+      <div class="row g-4">
+
+        <!-- Product Card 1 -->
+        <div class="col-12 col-md-6">
+          <div class="border rounded-3 p-3 h-100">
+            <div class="d-flex align-items-center gap-3">
+              <div class="bg-secondary-subtle rounded-3 flex-shrink-0" style="width: 90px; height: 90px;"></div>
+              <div class="flex-grow-1">
+                <div class="bg-secondary-subtle rounded" style="height: 6px; max-width: 80%;"></div>
+                <div class="bg-secondary-subtle rounded mt-2" style="height: 6px; max-width: 65%;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Card 2 -->
+        <div class="col-12 col-md-6">
+          <div class="border rounded-3 p-3 h-100">
+            <div class="d-flex align-items-center gap-3">
+              <div class="bg-secondary-subtle rounded-3 flex-shrink-0" style="width: 90px; height: 90px;"></div>
+              <div class="flex-grow-1">
+                <div class="bg-secondary-subtle rounded" style="height: 6px; max-width: 80%;"></div>
+                <div class="bg-secondary-subtle rounded mt-2" style="height: 6px; max-width: 65%;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Card 3 -->
+        <div class="col-12 col-md-6">
+          <div class="border rounded-3 p-3 h-100">
+            <div class="d-flex align-items-center gap-3">
+              <div class="bg-secondary-subtle rounded-3 flex-shrink-0" style="width: 90px; height: 90px;"></div>
+              <div class="flex-grow-1">
+                <div class="bg-secondary-subtle rounded" style="height: 6px; max-width: 80%;"></div>
+                <div class="bg-secondary-subtle rounded mt-2" style="height: 6px; max-width: 65%;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Card 4 -->
+        <div class="col-12 col-md-6">
+          <div class="border rounded-3 p-3 h-100">
+            <div class="d-flex align-items-center gap-3">
+              <div class="bg-secondary-subtle rounded-3 flex-shrink-0" style="width: 90px; height: 90px;"></div>
+              <div class="flex-grow-1">
+                <div class="bg-secondary-subtle rounded" style="height: 6px; max-width: 80%;"></div>
+                <div class="bg-secondary-subtle rounded mt-2" style="height: 6px; max-width: 65%;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Card 5 -->
+        <div class="col-12 col-md-6">
+          <div class="border rounded-3 p-3 h-100">
+            <div class="d-flex align-items-center gap-3">
+              <div class="bg-secondary-subtle rounded-3 flex-shrink-0" style="width: 90px; height: 90px;"></div>
+              <div class="flex-grow-1">
+                <div class="bg-secondary-subtle rounded" style="height: 6px; max-width: 80%;"></div>
+                <div class="bg-secondary-subtle rounded mt-2" style="height: 6px; max-width: 65%;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Card 6 -->
+        <div class="col-12 col-md-6">
+          <div class="border rounded-3 p-3 h-100">
+            <div class="d-flex align-items-center gap-3">
+              <div class="bg-secondary-subtle rounded-3 flex-shrink-0" style="width: 90px; height: 90px;"></div>
+              <div class="flex-grow-1">
+                <div class="bg-secondary-subtle rounded" style="height: 6px; max-width: 80%;"></div>
+                <div class="bg-secondary-subtle rounded mt-2" style="height: 6px; max-width: 65%;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom dots (mockup shows 3) -->
+      <div class="d-flex justify-content-center gap-4 mt-5">
+        <span class="rounded-circle bg-secondary-subtle d-inline-block" style="width: 14px; height: 14px;"></span>
+        <span class="rounded-circle bg-secondary-subtle d-inline-block" style="width: 14px; height: 14px;"></span>
+        <span class="rounded-circle bg-secondary-subtle d-inline-block" style="width: 14px; height: 14px;"></span>
+      </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-top mt-5 py-3">
+      <div class="container text-center text-muted">
+        © JavaBeen Mockup — www.javabeenmockup.com
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+
+  </body>
 </html>
