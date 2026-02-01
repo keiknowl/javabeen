@@ -1,60 +1,125 @@
-<header>
-  <div class="navbar">
-    <a class="brand" href="index.html" aria-label="JavaBeen Mockup Home">
-      <div class="brand-badge" aria-hidden="true"></div>
-      <span>JavaBeen Mockup</span>
-    </a>
-
-    <div class="nav-actions">
-      <div class="search" role="search" aria-label="Site search">
-        <span aria-hidden="true">⌕</span>
-        <input type="search" placeholder="Search…" />
-      </div>
-
-      <button class="hamburger" type="button" data-hamburger aria-expanded="false" aria-controls="mobileMenu">
-        ☰
-      </button>
-    </div>
-  </div>
-
-  <div id="mobileMenu" class="mobile-menu" data-mobile-menu>
-    <div class="container">
-      <div class="menu-list" aria-label="Site navigation">
-        <a class="menu-item" href="vision-about.html">Vision &amp; About Us</a>
-        <a class="menu-item" href="products.html">Products Menu</a>
-        <a class="menu-item" href="shop.html">Shop</a>
-        <a class="menu-item" href="locations.html">Locations</a>
-        <a class="menu-item" href="contact.html">Contact Us</a>
-      </div>
-    </div>
-  </div>
-</header>
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>JavaBeen Mockup | Locations</title>
-  <link rel="stylesheet" href="assets/css/styles.css" />
-</head>
-<body>
-  <header> ... (same shared header) ... </header>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JavaBeen Mockup | Locations</title>
 
-  <main class="container">
-    <h1 class="section-title">Locations</h1>
+    <!-- Bootstrap CSS (CDN) -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    >
+  </head>
 
-    <div class="two-col">
-      <div class="block" style="height: 360px;">Map placeholder</div>
-      <div class="stack">
-        <div class="card"><div class="block">Location 1</div></div>
-        <div class="card"><div class="block">Location 2</div></div>
-        <div class="card"><div class="block">Location 3</div></div>
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">JavaBeen Mockup</a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNav"
+          aria-controls="mainNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="vision-about.html">Vision & About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="products.html">Products</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="shop.html">Shop</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="locations.html">Locations</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
+    </nav>
 
-    <div class="footer">© JavaBeen Mockup</div>
-  </main>
+    <!-- Main -->
+    <main class="container my-5">
 
-  <script src="assets/js/nav.js"></script>
-</body>
+      <!-- Page label -->
+      <h1 class="h4 text-muted mb-4">Locations</h1>
+
+      <!-- Search bar placeholder (mockup shows a long input) -->
+      <div class="mb-5">
+        <div class="border rounded-3 bg-white" style="height: 54px;"></div>
+      </div>
+
+      <!-- Location list (3 stacked items) -->
+      <div class="d-grid gap-5">
+
+        <!-- Location 1 -->
+        <div class="d-flex align-items-center gap-3">
+          <div class="bg-secondary-subtle rounded-3 flex-shrink-0" style="width: 90px; height: 90px;"></div>
+          <div class="flex-grow-1">
+            <div class="bg-secondary-subtle rounded" style="height: 6px; max-width: 70%;"></div>
+            <div class="bg-secondary-subtle rounded mt-2" style="height: 6px; max-width: 55%;"></div>
+          </div>
+        </div>
+
+        <!-- Location 2 -->
+        <div class="d-flex align-items-center gap-3">
+          <div class="bg-secondary-subtle rounded-3 flex-shrink-0" style="width: 90px; height: 90px;"></div>
+          <div class="flex-grow-1">
+            <div class="bg-secondary-subtle rounded" style="height: 6px; max-width: 70%;"></div>
+            <div class="bg-secondary-subtle rounded mt-2" style="height: 6px; max-width: 55%;"></div>
+          </div>
+        </div>
+
+        <!-- Location 3 -->
+        <div class="d-flex align-items-center gap-3">
+          <div class="bg-secondary-subtle rounded-3 flex-shrink-0" style="width: 90px; height: 90px;"></div>
+          <div class="flex-grow-1">
+            <div class="bg-secondary-subtle rounded" style="height: 6px; max-width: 70%;"></div>
+            <div class="bg-secondary-subtle rounded mt-2" style="height: 6px; max-width: 55%;"></div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom dots -->
+      <div class="d-flex justify-content-center gap-4 mt-5">
+        <span class="rounded-circle bg-secondary-subtle d-inline-block" style="width: 14px; height: 14px;"></span>
+        <span class="rounded-circle bg-secondary-subtle d-inline-block" style="width: 14px; height: 14px;"></span>
+        <span class="rounded-circle bg-secondary-subtle d-inline-block" style="width: 14px; height: 14px;"></span>
+      </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-top mt-5 py-3">
+      <div class="container text-center text-muted">
+        © JavaBeen Mockup — www.javabeenmockup.com
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+
+  </body>
 </html>
