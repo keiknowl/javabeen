@@ -11,14 +11,74 @@
       rel="stylesheet"
       crossorigin="anonymous"
     >
+
+    <!-- Cafena-inspired theme overrides (match Home) -->
+    <style>
+      :root{
+        --jb-bg: #f3eee7;         /* warm beige background */
+        --jb-surface: #ffffff;    /* card surface */
+        --jb-brown: #2b1a12;      /* espresso text */
+        --jb-brown-2:#5b3a29;     /* secondary brown */
+        --jb-accent:#c8a46a;      /* latte gold */
+        --jb-accent-2:#b89255;    /* darker gold */
+        --jb-border:#e6dccf;      /* warm border */
+      }
+
+      body{
+        background: var(--jb-bg);
+        color: var(--jb-brown);
+      }
+
+      /* Navbar */
+      .navbar{
+        background: rgba(243,238,231,0.9) !important;
+        backdrop-filter: blur(6px);
+      }
+      .navbar .navbar-brand{
+        color: var(--jb-brown) !important;
+        letter-spacing: .3px;
+      }
+      .navbar .nav-link{
+        color: var(--jb-brown-2) !important;
+      }
+      .navbar .nav-link:hover{
+        color: var(--jb-brown) !important;
+      }
+      .navbar .nav-link.active{
+        color: var(--jb-brown) !important;
+        font-weight: 600;
+      }
+
+      .text-muted{
+        color: rgba(43,26,18,0.65) !important;
+      }
+
+      /* Location row "card" feel */
+      .jb-location{
+        background: var(--jb-surface);
+        border: 1px solid var(--jb-border);
+        border-radius: 16px;
+        padding: 16px;
+      }
+
+      .jb-thumb{
+        border: 1px solid var(--jb-border);
+        background: linear-gradient(180deg, rgba(255,255,255,0.7), rgba(255,255,255,0.45));
+        border-radius: 14px;
+      }
+
+      footer{
+        border-top: 1px solid var(--jb-border) !important;
+      }
+    </style>
   </head>
 
   <body>
 
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+    <nav class="navbar navbar-expand-lg border-bottom">
       <div class="container">
-        <a class="navbar-brand fw-bold" href="index.html">JavaBeen Mockup</a>
+        <a class="navbar-brand fw-bold" href="./">JavaBeen Mockup</a>
 
         <button
           class="navbar-toggler"
@@ -34,17 +94,21 @@
 
         <div class="collapse navbar-collapse" id="mainNav">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <!-- NEW ORDER -->
             <li class="nav-item">
-              <a class="nav-link" href="vision-about.html">Vision & About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="products.html">Products</a>
+              <a class="nav-link" href="./">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="shop.html">Shop</a>
             </li>
             <li class="nav-item">
+              <a class="nav-link" href="products.html">Products</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="locations.html">Locations</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="vision-about.html">Vision & About</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="contact.html">Contact</a>
@@ -60,7 +124,7 @@
       <!-- Page label -->
       <h1 class="h4 text-muted mb-4">Locations</h1>
 
-      <!-- Search bar (now real input) -->
+      <!-- Search bar -->
       <div class="mb-5 col-lg-7">
         <label for="locationSearch" class="form-label visually-hidden">Search locations</label>
         <input
@@ -72,60 +136,66 @@
         >
       </div>
 
-      <!-- Location list (3 stacked items) -->
-      <div class="d-grid gap-5">
+      <!-- Location list -->
+      <div class="d-grid gap-4">
 
         <!-- Location 1 -->
-        <div class="d-flex align-items-start gap-3">
-          <div class="bg-secondary-subtle rounded-3 d-flex align-items-center justify-content-center flex-shrink-0"
-               style="width: 90px; height: 90px;">
-            <small class="text-muted">Image</small>
-          </div>
+        <div class="jb-location">
+          <div class="d-flex align-items-start gap-3">
+            <div class="jb-thumb d-flex align-items-center justify-content-center flex-shrink-0"
+                 style="width: 90px; height: 90px;">
+              <small class="text-muted">Image</small>
+            </div>
 
-          <div class="flex-grow-1">
-            <h6 class="fw-semibold mb-1">Seattle — Capitol Hill</h6>
-            <p class="text-muted small mb-1">
-              8:00 AM – 6:00 PM • Espresso bar + community seating
-            </p>
-            <p class="text-muted small mb-0">
-              Suggested image: storefront/interior shot with warm lighting.
-            </p>
+            <div class="flex-grow-1">
+              <h6 class="fw-semibold mb-1">Seattle — Capitol Hill</h6>
+              <p class="text-muted small mb-1">
+                8:00 AM – 6:00 PM • Espresso bar + community seating
+              </p>
+              <p class="text-muted small mb-0">
+                Suggested image: storefront/interior shot with warm lighting.
+              </p>
+            </div>
           </div>
         </div>
 
         <!-- Location 2 -->
-        <div class="d-flex align-items-start gap-3">
-          <div class="bg-secondary-subtle rounded-3 d-flex align-items-center justify-content-center flex-shrink-0"
-               style="width: 90px; height: 90px;">
-            <small class="text-muted">Image</small>
-          </div>
+        <div class="jb-location">
+          <div class="d-flex align-items-start gap-3">
+            <div class="jb-thumb d-flex align-items-center justify-content-center flex-shrink-0"
+                 style="width: 90px; height: 90px;">
+              <small class="text-muted">Image</small>
+            </div>
 
-          <div class="flex-grow-1">
-            <h6 class="fw-semibold mb-1">Bellevue — Downtown</h6>
-            <p class="text-muted small mb-1">
-              7:00 AM – 5:00 PM • Grab-and-go drinks + weekend specials
-            </p>
-            <p class="text-muted small mb-0">
-              Suggested image: clean product counter shot or branded signage.
-            </p>
+            <div class="flex-grow-1">
+              <h6 class="fw-semibold mb-1">Bellevue — Downtown</h6>
+              <p class="text-muted small mb-1">
+                7:00 AM – 5:00 PM • Grab-and-go drinks + weekend specials
+              </p>
+              <p class="text-muted small mb-0">
+                Suggested image: clean product counter shot or branded signage.
+              </p>
+            </div>
           </div>
         </div>
 
         <!-- Location 3 -->
-        <div class="d-flex align-items-start gap-3">
-          <div class="bg-secondary-subtle rounded-3 d-flex align-items-center justify-content-center flex-shrink-0"
-               style="width: 90px; height: 90px;">
-            <small class="text-muted">Image</small>
-          </div>
+        <div class="jb-location">
+          <div class="d-flex align-items-start gap-3">
+            <div class="jb-thumb d-flex align-items-center justify-content-center flex-shrink-0"
+                 style="width: 90px; height: 90px;">
+              <small class="text-muted">Image</small>
+            </div>
 
-          <div class="flex-grow-1">
-            <h6 class="fw-semibold mb-1">Seattle — South Lake Union</h6>
-            <p class="text-muted small mb-1">
-              7:30 AM – 4:30 PM • Quiet work tables + seasonal cold brew
-            </p>
-            <p class="text-muted small mb-0">
-              Suggested image: workspace seating, laptops, or a cold brew feature.
-            </p>
+            <div class="flex-grow-1">
+              <h6 class="fw-semibold mb-1">Seattle — South Lake Union</h6>
+              <p class="text-muted small mb-1">
+                7:30 AM – 4:30 PM • Quiet work tables + seasonal cold brew
+              </p>
+              <p class="text-muted small mb-0">
+                Suggested image: workspace seating, laptops, or a cold brew feature.
+              </p>
+            </div>
           </div>
         </div>
 
@@ -141,7 +211,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="border-top mt-5 py-3">
+    <footer class="mt-5 py-3">
       <div class="container text-center text-muted">
         © JavaBeen Mockup — www.javabeenmockup.com
       </div>
