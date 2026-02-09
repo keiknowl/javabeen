@@ -5,33 +5,122 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>JavaBeen Mockup | Contact</title>
 
+    <!-- Bootstrap CSS (CDN) -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       rel="stylesheet"
       crossorigin="anonymous"
     >
+
+    <!-- Cafena-inspired theme overrides (match Home) -->
+    <style>
+      :root{
+        --jb-bg: #f3eee7;         /* warm beige background */
+        --jb-surface: #ffffff;    /* card surface */
+        --jb-brown: #2b1a12;      /* espresso text */
+        --jb-brown-2:#5b3a29;     /* secondary brown */
+        --jb-accent:#c8a46a;      /* latte gold */
+        --jb-accent-2:#b89255;    /* darker gold */
+        --jb-border:#e6dccf;      /* warm border */
+      }
+
+      body{
+        background: var(--jb-bg);
+        color: var(--jb-brown);
+      }
+
+      /* Navbar */
+      .navbar{
+        background: rgba(243,238,231,0.9) !important;
+        backdrop-filter: blur(6px);
+      }
+      .navbar .navbar-brand{
+        color: var(--jb-brown) !important;
+        letter-spacing: .3px;
+      }
+      .navbar .nav-link{
+        color: var(--jb-brown-2) !important;
+      }
+      .navbar .nav-link:hover{
+        color: var(--jb-brown) !important;
+      }
+      .navbar .nav-link.active{
+        color: var(--jb-brown) !important;
+        font-weight: 600;
+      }
+
+      .text-muted{
+        color: rgba(43,26,18,0.65) !important;
+      }
+
+      /* Buttons */
+      .btn-jb-primary{
+        background: var(--jb-accent);
+        border: 1px solid var(--jb-accent-2);
+        color: var(--jb-brown);
+        font-weight: 600;
+      }
+      .btn-jb-primary:hover{
+        background: var(--jb-accent-2);
+        border-color: var(--jb-accent-2);
+        color: var(--jb-brown);
+      }
+
+      /* Form + surfaces */
+      .jb-panel{
+        background: var(--jb-surface);
+        border: 1px solid var(--jb-border);
+        border-radius: 16px;
+        padding: 18px;
+      }
+
+      /* Footer */
+      footer{
+        border-top: 1px solid var(--jb-border) !important;
+      }
+    </style>
   </head>
 
   <body>
 
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+    <nav class="navbar navbar-expand-lg border-bottom">
       <div class="container">
-        <a class="navbar-brand fw-bold" href="index.html">JavaBeen Mockup</a>
+        <a class="navbar-brand fw-bold" href="./">JavaBeen Mockup</a>
 
-        <button class="navbar-toggler" type="button"
+        <button
+          class="navbar-toggler"
+          type="button"
           data-bs-toggle="collapse"
-          data-bs-target="#mainNav">
+          data-bs-target="#mainNav"
+          aria-controls="mainNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
           <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="mainNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a class="nav-link" href="vision-about.html">Vision & About</a></li>
-            <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
-            <li class="nav-item"><a class="nav-link" href="shop.html">Shop</a></li>
-            <li class="nav-item"><a class="nav-link" href="locations.html">Locations</a></li>
-            <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <!-- NEW ORDER -->
+            <li class="nav-item">
+              <a class="nav-link" href="./">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="shop.html">Shop</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="products.html">Products</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="locations.html">Locations</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="vision-about.html">Vision & About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="contact.html">Contact</a>
+            </li>
           </ul>
         </div>
       </div>
@@ -47,37 +136,45 @@
         ✅ Message sent successfully! (Mockup response)
       </div>
 
-      <!-- Form layout -->
       <div class="row g-4 align-items-start">
 
         <!-- Form -->
         <div class="col-12 col-lg-7">
-          <form id="contactForm" class="d-grid gap-4">
+          <form id="contactForm" class="jb-panel d-grid gap-4" aria-label="Contact form">
 
-            <input
-              id="name"
-              type="text"
-              class="form-control form-control-lg"
-              placeholder="Name"
-              required
-            >
+            <div>
+              <label for="name" class="form-label visually-hidden">Name</label>
+              <input
+                id="name"
+                type="text"
+                class="form-control form-control-lg"
+                placeholder="Name"
+                required
+              >
+            </div>
 
-            <input
-              id="email"
-              type="email"
-              class="form-control form-control-lg"
-              placeholder="Email"
-              required
-            >
+            <div>
+              <label for="email" class="form-label visually-hidden">Email</label>
+              <input
+                id="email"
+                type="email"
+                class="form-control form-control-lg"
+                placeholder="Email"
+                required
+              >
+            </div>
 
-            <textarea
-              id="message"
-              class="form-control form-control-lg"
-              rows="6"
-              placeholder="Message"
-              required
-              style="min-height:220px;"
-            ></textarea>
+            <div>
+              <label for="message" class="form-label visually-hidden">Message</label>
+              <textarea
+                id="message"
+                class="form-control form-control-lg"
+                rows="6"
+                placeholder="Message"
+                required
+                style="min-height:220px;"
+              ></textarea>
+            </div>
 
           </form>
         </div>
@@ -86,7 +183,8 @@
         <div class="col-12 col-lg-5 d-flex justify-content-lg-end">
           <button
             id="submitBtn"
-            class="btn btn-secondary btn-lg rounded-pill px-5"
+            type="button"
+            class="btn btn-jb-primary btn-lg rounded-pill px-5"
             style="height:64px;width:320px;"
           >
             Send
@@ -105,14 +203,17 @@
     </main>
 
     <!-- Footer -->
-    <footer class="border-top mt-5 py-3">
+    <footer class="mt-5 py-3">
       <div class="container text-center text-muted">
         © JavaBeen Mockup — www.javabeenmockup.com
       </div>
     </footer>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap JS Bundle -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      crossorigin="anonymous"
+    ></script>
 
     <!-- MOCK SUBMIT SCRIPT -->
     <script>
@@ -121,7 +222,6 @@
       const success = document.getElementById("successMessage");
 
       btn.addEventListener("click", function () {
-
         if (!form.checkValidity()) {
           form.reportValidity();
           return;
@@ -129,7 +229,6 @@
 
         success.classList.remove("d-none");
         form.reset();
-
         success.scrollIntoView({ behavior: "smooth" });
       });
     </script>
