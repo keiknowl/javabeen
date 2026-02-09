@@ -11,28 +11,107 @@
       rel="stylesheet"
       crossorigin="anonymous"
     >
+
+    <!-- Cafena-inspired theme overrides (match Home) -->
+    <style>
+      :root{
+        --jb-bg: #f3eee7;         /* warm beige background */
+        --jb-surface: #ffffff;    /* card surface */
+        --jb-brown: #2b1a12;      /* espresso text */
+        --jb-brown-2:#5b3a29;     /* secondary brown */
+        --jb-accent:#c8a46a;      /* latte gold */
+        --jb-accent-2:#b89255;    /* darker gold */
+        --jb-border:#e6dccf;      /* warm border */
+      }
+
+      body{
+        background: var(--jb-bg);
+        color: var(--jb-brown);
+      }
+
+      /* Navbar */
+      .navbar{
+        background: rgba(243,238,231,0.9) !important;
+        backdrop-filter: blur(6px);
+      }
+      .navbar .navbar-brand{
+        color: var(--jb-brown) !important;
+        letter-spacing: .3px;
+      }
+      .navbar .nav-link{
+        color: var(--jb-brown-2) !important;
+      }
+      .navbar .nav-link:hover{
+        color: var(--jb-brown) !important;
+      }
+      .navbar .nav-link.active{
+        color: var(--jb-brown) !important;
+        font-weight: 600;
+      }
+
+      .text-muted{
+        color: rgba(43,26,18,0.65) !important;
+      }
+
+      /* Product card surface */
+      .jb-item{
+        border: 1px solid var(--jb-border);
+        background: var(--jb-surface);
+        border-radius: 16px;
+      }
+
+      .jb-thumb{
+        border: 1px solid var(--jb-border);
+        background: linear-gradient(180deg, rgba(255,255,255,0.7), rgba(255,255,255,0.45));
+        border-radius: 14px;
+      }
+
+      footer{
+        border-top: 1px solid var(--jb-border) !important;
+      }
+    </style>
   </head>
 
   <body>
 
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+    <nav class="navbar navbar-expand-lg border-bottom">
       <div class="container">
-        <a class="navbar-brand fw-bold" href="index.html">JavaBeen Mockup</a>
+        <a class="navbar-brand fw-bold" href="./">JavaBeen Mockup</a>
 
-        <button class="navbar-toggler" type="button"
+        <button
+          class="navbar-toggler"
+          type="button"
           data-bs-toggle="collapse"
-          data-bs-target="#mainNav">
+          data-bs-target="#mainNav"
+          aria-controls="mainNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
           <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="mainNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a class="nav-link" href="vision-about.html">Vision & About</a></li>
-            <li class="nav-item"><a class="nav-link active" href="products.html">Products</a></li>
-            <li class="nav-item"><a class="nav-link" href="shop.html">Shop</a></li>
-            <li class="nav-item"><a class="nav-link" href="locations.html">Locations</a></li>
-            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <!-- NEW ORDER -->
+            <li class="nav-item">
+              <a class="nav-link" href="./">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="shop.html">Shop</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="products.html">Products</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="locations.html">Locations</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="vision-about.html">Vision & About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
           </ul>
         </div>
       </div>
@@ -44,14 +123,14 @@
       <h1 class="h4 text-muted mb-4">Products Menu</h1>
 
       <!-- Intro Text -->
-      <div class="mb-5 col-lg-7">
-        <p class="lead">
-          Our menu is built around thoughtfully sourced beans and handcrafted
-          drinks designed to balance comfort and creativity.
+      <div class="mb-5 col-lg-8">
+        <p class="lead mb-3">
+          Our menu is built around thoughtfully sourced beans and handcrafted drinks designed
+          to balance comfort and creativity.
         </p>
-        <p>
-          Each product below represents a future featured item — imagery will be
-          added as brand photography develops.
+        <p class="text-muted mb-0">
+          Each product below represents a future featured item — imagery will be added as brand
+          photography develops.
         </p>
       </div>
 
@@ -60,9 +139,9 @@
 
         <!-- Espresso -->
         <div class="col-12 col-md-6">
-          <div class="border rounded-3 p-3 h-100">
+          <div class="jb-item p-3 h-100">
             <div class="d-flex gap-3">
-              <div class="bg-secondary-subtle rounded-3 d-flex align-items-center justify-content-center"
+              <div class="jb-thumb d-flex align-items-center justify-content-center flex-shrink-0"
                    style="width:90px;height:90px;">
                 <small class="text-muted">Image</small>
               </div>
@@ -78,9 +157,9 @@
 
         <!-- Latte -->
         <div class="col-12 col-md-6">
-          <div class="border rounded-3 p-3 h-100">
+          <div class="jb-item p-3 h-100">
             <div class="d-flex gap-3">
-              <div class="bg-secondary-subtle rounded-3 d-flex align-items-center justify-content-center"
+              <div class="jb-thumb d-flex align-items-center justify-content-center flex-shrink-0"
                    style="width:90px;height:90px;">
                 <small class="text-muted">Image</small>
               </div>
@@ -96,9 +175,9 @@
 
         <!-- Cold Brew -->
         <div class="col-12 col-md-6">
-          <div class="border rounded-3 p-3 h-100">
+          <div class="jb-item p-3 h-100">
             <div class="d-flex gap-3">
-              <div class="bg-secondary-subtle rounded-3 d-flex align-items-center justify-content-center"
+              <div class="jb-thumb d-flex align-items-center justify-content-center flex-shrink-0"
                    style="width:90px;height:90px;">
                 <small class="text-muted">Image</small>
               </div>
@@ -114,9 +193,9 @@
 
         <!-- Mocha -->
         <div class="col-12 col-md-6">
-          <div class="border rounded-3 p-3 h-100">
+          <div class="jb-item p-3 h-100">
             <div class="d-flex gap-3">
-              <div class="bg-secondary-subtle rounded-3 d-flex align-items-center justify-content-center"
+              <div class="jb-thumb d-flex align-items-center justify-content-center flex-shrink-0"
                    style="width:90px;height:90px;">
                 <small class="text-muted">Image</small>
               </div>
@@ -132,9 +211,9 @@
 
         <!-- Matcha -->
         <div class="col-12 col-md-6">
-          <div class="border rounded-3 p-3 h-100">
+          <div class="jb-item p-3 h-100">
             <div class="d-flex gap-3">
-              <div class="bg-secondary-subtle rounded-3 d-flex align-items-center justify-content-center"
+              <div class="jb-thumb d-flex align-items-center justify-content-center flex-shrink-0"
                    style="width:90px;height:90px;">
                 <small class="text-muted">Image</small>
               </div>
@@ -150,9 +229,9 @@
 
         <!-- Seasonal -->
         <div class="col-12 col-md-6">
-          <div class="border rounded-3 p-3 h-100">
+          <div class="jb-item p-3 h-100">
             <div class="d-flex gap-3">
-              <div class="bg-secondary-subtle rounded-3 d-flex align-items-center justify-content-center"
+              <div class="jb-thumb d-flex align-items-center justify-content-center flex-shrink-0"
                    style="width:90px;height:90px;">
                 <small class="text-muted">Image</small>
               </div>
@@ -178,7 +257,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="border-top mt-5 py-3">
+    <footer class="mt-5 py-3">
       <div class="container text-center text-muted">
         © JavaBeen Mockup — www.javabeenmockup.com
       </div>
